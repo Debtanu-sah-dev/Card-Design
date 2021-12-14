@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Card Design</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+        font-family: system-ui;
+    }
+    
+    body{
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #B7B7FF;
+    }
+    
+    #main{
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWjCuQf8D45P_lSbC57BGpMqrvsADTXhDOpCEJ40sL9U8TCI0&s");
+        background-size: 100% 100% ;
+        background-position: center center ;
+        width: 20vmax;
+        height: 30vmax;
+        border-radius: 2vmin;
+        position: relative;
+        transition: 0.2s;
+    }
+    
+    #main:hover{
+        background-image:linear-gradient(#0000,#111), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWjCuQf8D45P_lSbC57BGpMqrvsADTXhDOpCEJ40sL9U8TCI0&s");
+        background-size: 110% 110%;
+    }
+    
+    #main:hover #text_holder{
+        display: block;
+        animation: resize 1s ease-in-out forwards;
+    }
+    
+    #text_holder:hover{
+        display: block;
+        animation: resize 1s ease-in-out forwards;
+    }
+    
+    @keyframes resize{
+        99%{
+            height: 55%;
+            overflow: hidden;
+        }
+        100%{
+            overflow: visible;
+            height: 55%;
+        }
+    }
+    #text_holder{
+        background: #292A38;
+        padding: 2vmin;
+        border-bottom-right-radius: 2vmin;
+        border-bottom-left-radius: 2vmin;
+        position: absolute;
+        bottom: 0;
+        display: none;
+        height: 0%;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    #header{
+        background: #42445A;
+        padding: 1vmin;
+        border-radius: 10vmax;
+        position: relative;
+        left: -5.25vmin;
+        height: 7vmin;
+        font-size: 3.5vmin;
+        padding-left: 5.25vmin;
+        margin-bottom: 3.5vmin;
+    }
+    
+    #header:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 7vmin;
+        background: #232334;
+        height: 7vmin;
+        width: 3.5vmin;
+        border-top-left-radius: 10vmax;
+        border-bottom-left-radius: 10vmax;
+    }
+    
+    #header:before{
+        content:'';
+        position: absolute;
+        left: 0;
+        top: 3.5vmin;
+        background: #42445A;
+        height: 7vmin;
+        width: 3.5vmin;
+    }
+    
+    #btn{
+        outline: none;
+        border: none;
+        background: #42445A;
+        width: 100%;
+        padding: 1vmin;
+        font-size: 2vmin;
+        border-radius: 2vmin;
+        margin-top: 2vmin;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <!--Lets add hover effect-->
+    <div id="main">
+        <div id="text_holder">
+            <h1 id="header">To Do List</h1>
+            <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            <button id="btn">View Projects</button>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>
